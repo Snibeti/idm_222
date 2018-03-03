@@ -1,0 +1,155 @@
+
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+@media print {
+
+	body> *:not(main) {
+		display: none;
+	}
+}
+
+h1 {
+
+	font-size: 4em;
+	text-align: left;
+	padding-left: .2em;
+}
+
+.nav {
+	
+	text-align:center;
+	padding: 0;
+	float: right;
+	width: 100%;
+	display: inline;
+
+}
+
+
+.nav li {
+
+
+	transition: all .3s ease-in-out;
+	display:inline-block;
+
+}
+.nav a {
+
+	color: black;
+	text-decoration:none; 
+	padding:0 30px; /* variable width */
+
+}
+
+
+/* Grid Stuff */
+
+
+.main_container {
+
+	display: grid;
+	grid-template-columns: 2fr 8fr;
+	grid-column-gap: 1em;
+	grid-row-gap: 1em;
+	text-align: center;
+}
+
+.name {
+
+	height: 100vh;
+	background: #eee;
+}
+
+
+/* Nested Grid */
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  /*grid-auto-rows: 50vh;*/
+}
+
+.portfolio > div {
+  background-color: #eee;
+  padding: 1em;
+  text-align: center;
+}
+
+.portfolio > div:nth-child(odd){
+
+	background-color: #ddd; 
+}
+
+
+
+/* This CSS will be applied only to phones and other small devices. */
+
+@media only screen and (max-width: 480px) {
+
+	.nav a {
+
+		color: white;
+		font-size: 2em;
+	}
+
+	.nav li {
+
+	transition: all .3s ease-in-out;
+	display:block;
+
+	}
+
+	h1 {
+		
+	font-size: 2em;
+	}
+    
+}
+/* Social Icons */
+
+
+#social_icons {
+
+	width: 100%;
+  	margin: 0 auto;
+  	text-align: center;
+  }
+
+
+ a {
+
+ 	text-align: center;
+ }
+
+.fa {
+
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Adds a hover effect */
+.fa:hover {
+
+	color: cornflowerblue;
+	transition-duration: 0.5s, 0.5s;
+   
+}
+
+/* Twitter */
+.fa-twitter, .fa-github-square, .fa-linkedin {
+    color: black;
+}
+
+

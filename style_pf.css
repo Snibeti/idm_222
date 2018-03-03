@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300');
+
+*{
+	
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	box-sizing: border-box;
+	color: white;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html, body { 
+
+	margin: 0;
+	height: 100%; 
+
+}
+
+#wrapper {
+            min-height: 100%;
+            background-color: #333; 
+}
+
+
+h1 {
+
+
+	padding-top:10%;
+	padding-bottom: 15%;
+	width: 60%;
+	margin: 0 auto;
+	color: cornflowerblue;
+	font-weight: 200;
+	text-transform: uppercase;
+	font-size: 8em;
+	text-align: center;
+
+}
+
+h1 a {
+
+	text-decoration: none;
+	color:cornflowerblue;
+}
+
+li a:hover {
+
+transition-duration: 0.5s;
+color: cornflowerblue;
+
+}
+
+.nav {
+	
+	text-align:center;
+	padding: 0;
+
+}
+.nav li {
+
+
+	transition: all .3s ease-in-out;
+	display:inline-block;
+
+}
+.nav a {
+
+	text-decoration:none; 
+	padding:0 30px; /* variable width */
+
+}
+
+
+li a:hover {
+
+color: cornflowerblue;
+
+}
+
+
+.active {
+
+	color:cornflowerblue;
+}
+
+
+
+.main_container {
+
+	display: grid;
+	grid-template-rows: 60% 40%;
+}
+
+/*----- About Section of Front Page -----*/
+
+
+.about_section {
+
+	display: inline;
+
+}
+
+img.about_img {
+
+	width: 40%;
+	clip-path: circle(30% at center);
+	display:inline;
+
+}
+
+.about_text {
+
+	
+	background-color: cornflowerblue;
+	width: 60%;
+	padding-left: 3%;
+	padding-right: 3%;
+	padding-top: 2%;
+	float: left;
+
+}
+
+.about_text h2 {
+
+	font-size: 4em;	
+
+}
+
+/* This CSS will be applied only to phones and other small devices. */
+
+@media only screen and (max-width: 480px) {
+
+	.nav a {
+
+		color: white;
+		font-size: 2em;
+	}
+
+	.nav li {
+
+	transition: all .3s ease-in-out;
+	display:block;
+
+	}
+
+	h1 {
+		
+	font-size: 5em;
+	text-align: left;
+	}
+    
+}
