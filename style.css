@@ -2,12 +2,30 @@
 html {
   box-sizing: border-box;
   font-family: sans-serif;
+  margin: 0;
+  background: linear-gradient(132deg, #FF9966, #990033);
+  background-size: 300% 300%;
+  animation: gradient_bg 15s ease infinite;
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+
+@keyframes gradient_bg {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+  
 }
 
 @media print {
@@ -19,10 +37,21 @@ html {
 
 h1 {
 
-	font-size: 4em;
+	font-size: 5em;
 	text-align: left;
 	padding-left: .2em;
+	color: white;
+	font-weight: 200;
+	margin: 0;
 }
+
+img {
+    
+    max-width: 100%;
+}
+
+
+
 
 .nav {
 	
@@ -31,24 +60,25 @@ h1 {
 	float: right;
 	width: 100%;
 	display: inline;
+	color: white;
 
 }
-
 
 .nav li {
 
 
-	transition: all .3s ease-in-out;
+	transition:  .3s;
 	display:inline-block;
 
 }
 .nav a {
 
-	color: black;
+	color: white;
 	text-decoration:none; 
 	padding:0 30px; /* variable width */
 
 }
+
 
 
 /* Grid Stuff */
@@ -61,12 +91,14 @@ h1 {
 	grid-column-gap: 1em;
 	grid-row-gap: 1em;
 	text-align: center;
+
 }
 
 .name {
 
-	height: 100vh;
-	background: #eee;
+	height: 100%;
+	padding-top: 2em;
+	padding-bottom: 2em;
 }
 
 
@@ -75,30 +107,55 @@ h1 {
 .portfolio {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /*grid-auto-rows: 50vh;*/
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 100%;
+  grid-gap: 1em;
+}
+
+.grid-item {
+
+	color: white;
+	transition: all .3s ease-in-out;
+}
+
+.grid-item:hover {
+
+	opacity: 1;
 }
 
 .portfolio > div {
-  background-color: #eee;
-  padding: 1em;
+  /*background-color: #eee;*/
+  /*padding: 1em;*/
   text-align: center;
 }
 
 .portfolio > div:nth-child(odd){
 
-	background-color: #ddd; 
+	z-index: 99;
+
 }
 
+/* Applied only to tablets and other small devices */
 
+@media only screen and (max-width: 840px){
 
-/* This CSS will be applied only to phones and other small devices. */
+	.portfolio {
 
-@media only screen and (max-width: 480px) {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(1, 1fr);
+	}
+	
+
+}
+
+/* Applied only to phones and other small devices */
+
+@media only screen and (max-width: 620px) {
 
 	.nav a {
 
 		color: white;
-		font-size: 2em;
+		font-size: 1.5em;
 	}
 
 	.nav li {
@@ -112,8 +169,42 @@ h1 {
 		
 	font-size: 2em;
 	}
+
+	.main_container {
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-column-gap: 1em;
+	grid-row-gap: 1em;
+	text-align: center;
+
+	}
+
+	.main_container {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    }
+
+  	.name {
+
+  		height: auto;
+
+  	}
+
+  	h1 {
+
+  		text-align: center;
+  	}
     
 }
+
+
 /* Social Icons */
 
 
@@ -147,7 +238,7 @@ h1 {
 
 /* Twitter */
 .fa-twitter, .fa-github-square, .fa-linkedin {
-    color: black;
+    color: white;
 }
 
 
