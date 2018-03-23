@@ -1,20 +1,13 @@
-// // Get the modal
-// var modal = document.getElementById('myModal');
+var i = 0;
+var txt = 'Hi, my name is Sarah and I\'m an aspiring User Experience Designer\!';
+var speed = 50;
 
-// // Get the image and insert it inside the modal - use its "alt" text as a caption
-// var img = document.getElementById('myImg');
-// var modalImg = document.getElementById("img01");
-// var captionText = document.getElementById("caption");
-// img.onclick = function(){
-//     modal.style.display = "block";
-//     modalImg.src = this.src;
-//     captionText.innerHTML = this.alt;
-// }
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("about_me").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
 
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() { 
-//     modal.style.display = "none";
-// }
+window.onload = typeWriter;

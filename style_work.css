@@ -3,6 +3,7 @@ html {
   font-family: sans-serif;
   margin: 0;
   background-color: #333;
+  font-family: 'Lato', sans-serif;
 
 }
 
@@ -10,6 +11,8 @@ html {
 img {
     
     max-width: 100%;
+    position: relative;
+  
 }
 
 h2 {
@@ -28,6 +31,11 @@ h2 a {
 	color: white;
 }
 
+a {
+	
+	transition: .3s ease-in-out;
+}
+
 .nav {
 	
 	text-align: left;
@@ -41,19 +49,21 @@ h2 a {
 
 
 	transition:  .3s;
-	padding-bottom: 12%;
+	padding-bottom: 10%;
 
 }
 .nav a {
 
-	text-decoration:none;
+	text-decoration: none;
 	font-size: 1.5em;
+	color: white;
 
 }
 
 a:hover {
     
-    color: red;
+    color: #1C7293;
+    transition: .3s ease-in-out;
 }
 
 h3 {
@@ -61,6 +71,15 @@ h3 {
 	font-size: 7em;
 	margin: 0;
 	color: white;
+	background-color: #333;
+}
+
+h4 {
+
+	font-size: 3em;
+	color: white;
+	text-align: left;
+	margin-left: 12%;
 }
 
 img {
@@ -75,7 +94,10 @@ img {
 	grid-column-gap: 1em;
 	grid-row-gap: 1em;
 	text-align: center;
-	overflow: hidden;
+	position: sticky;
+	top: 0px;
+	background-color: #333;
+	/*overflow: hidden;*/
 }
 
 p a{
@@ -93,6 +115,54 @@ p a{
 
 }
 
+
+/* ---- Styles for the about page ---- */
+
+#about_me {
+
+	margin-top: 2%;
+}
+
+.about_content {
+
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: 2em;
+}
+
+.about_content img {
+
+	max-width: 20em;
+	margin: 0 auto;
+	border-radius: 50%;
+	margin-bottom: 5%
+}
+
+.about_text {
+
+	margin-left: 10%;
+	margin-right: 10%;
+	justify-content: center;
+}
+
+/* ---- Work Pages styling ---- */
+
+.item_0 {
+ 
+    position: relative;
+    justify-content: center;
+    margin: 0 auto;
+    overflow: hidden
+}
+
+.item_1 {
+
+position: -webkit-sticky;
+position: sticky;
+top: 0px;
+
+}
+
 p {
 
 	font-family: omnes-pro, sans-serif;
@@ -101,4 +171,94 @@ p {
 	text-align: left;
 	font-size: 1.2em;
 	color: white;
+	position: sticky;
+	top: 2px;
+	background-color: #333;
 }
+
+
+/* Social Media Stuff */
+#social_icons {
+
+	max-width: 100%;
+  	margin: 0 auto;
+  	text-align: center;
+  }
+
+
+ a {
+
+ 	text-align: center;
+ }
+
+ .active {
+
+ 	border-bottom: 2px solid #fff;
+ }
+
+.fa {
+
+    padding: .3em;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Adds a hover effect */
+.fa:hover {
+
+	color: #1C7293;
+	transition-duration: 0.5s, 0.5s;
+   
+}
+
+.fa-twitter, .fa-github-square, .fa-linkedin {
+    color: white;
+}
+
+@media only screen and (max-width: 620px) {
+
+
+	.nav a {
+
+		color: white;
+		font-size: 1.5em;
+	}
+
+	.nav li {
+
+	transition: all .3s ease-in-out;
+	display:block;
+	text-align: center;
+	margin: 0 auto;
+	padding-bottom: 5%;
+
+	}
+
+	h3 {
+		
+	font-size: 2em;
+	text-align: center;
+	margin: 0 auto;
+	
+	}
+
+
+	h2 {
+
+	font-size: 3em;
+	text-align: center;
+	margin: 0 auto;
+	}
+
+	.main_container, .content {
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-column-gap: 1em;
+	grid-row-gap: 1em;
+	text-align: center;
+
+	}
+
+/* Test for Modal */
+
